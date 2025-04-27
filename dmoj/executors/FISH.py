@@ -7,7 +7,7 @@ class Executor(ScriptExecutor):
     ext = 'fish'
     command = 'fish'
     test_program = """\
-"!dlrow ,olleH"l?!;oe0.
+"!dlroW ,olleH"l?!;oe0.
 """
 
     syscalls = ['fork', 'vfork', 'clock_nanosleep']
