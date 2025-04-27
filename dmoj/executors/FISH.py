@@ -10,7 +10,7 @@ class Executor(ScriptExecutor):
 "!dlrow ,olleH"l?!;oe0.
 """
 
-    syscalls = ['fork', 'vfork']
+    syscalls = ['fork', 'vfork', 'sys_clock_nanosleep']
 
     def get_cmdline(self, **kwargs) -> List[str]:
         command = self.get_command()
