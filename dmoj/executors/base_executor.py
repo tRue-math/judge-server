@@ -371,14 +371,11 @@ class BaseExecutor(metaclass=ExecutorMeta):
                     )
                 )
             if stdout.strip() != test_message and error_callback:
-                print_ansi('Got unexpected stdout output:\n' + utf8text(stdout))
                 error_callback('Got unexpected stdout output:\n' + utf8text(stdout))
             if stderr:
                 if error_callback:
-                    print_ansi('Got unexpected stderr output:\n' + utf8text(stderr))
                     error_callback('Got unexpected stderr output:\n' + utf8text(stderr))
                 else:
-                    print_ansi(stderr)
                     print(stderr, file=sys.stderr)
             if proc.protection_fault:
                 print_protection_fault(proc.protection_fault)
