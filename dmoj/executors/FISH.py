@@ -10,7 +10,7 @@ class Executor(ScriptExecutor):
 "!dlrow ,olleH"l?!;oe0.
 """
 
-    syscalls = ['vfork']
+    syscalls = ['fork', 'vfork']
 
     def get_cmdline(self, **kwargs) -> List[str]:
         command = self.get_command()
