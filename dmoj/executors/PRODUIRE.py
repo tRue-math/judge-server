@@ -1,8 +1,6 @@
-from typing import List
+from dmoj.executors.script_executor import ScriptExecutor
 
-from dmoj.executors.mono_executor import MonoExecutor
-
-class Executor(MonoExecutor):
+class Executor(ScriptExecutor):
     ext = 'produire'
     command = 'produire'
 
@@ -10,9 +8,3 @@ class Executor(MonoExecutor):
 ｢echo: Hello, World!｣を報告
 """
     syscalls = ['execve','unlink','wait4','clock_nanosleep','fork']
-
-    def get_compile_args(self) -> List[str]:
-        command = self.get_command()
-        assert command is not None
-        assert self._code is not None
-        return [command, self._code, f'-out:{self.get_compiled_file()}']
