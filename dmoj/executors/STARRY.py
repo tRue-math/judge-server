@@ -1,8 +1,4 @@
-from typing import List
-
-from dmoj.executors.base_executor import VersionFlags
 from dmoj.executors.script_executor import ScriptExecutor
-
 
 class Executor(ScriptExecutor):
     ext = 'starry'
