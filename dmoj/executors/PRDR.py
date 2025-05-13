@@ -10,7 +10,7 @@ class MonoTracedPopen(TracedPopen):
         pass
 
 class Executor(ScriptExecutor):
-    ext = 'produire'
+    ext = 'rdr'
     command = 'produire'
 
     test_program = """\
