@@ -204,8 +204,8 @@ class BaseExecutor(metaclass=ExecutorMeta):
             f'{runtime} {".".join(map(str, version))}' for runtime, version in self.get_runtime_versions()
         )
 
-        if process.is_ir:
-            result.result_flag |= Result.IR
+#       if process.is_ir:
+#           result.result_flag |= Result.IR
         if process.is_rte:
             result.result_flag |= Result.RTE
         if process.is_ole:
