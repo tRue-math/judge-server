@@ -361,7 +361,7 @@ class BaseExecutor(metaclass=ExecutorMeta):
                 # Cache the versions now, so that the handshake packet doesn't take ages to generate
                 cls.get_runtime_versions()
                 usage = f'[{proc.execution_time:.3f}s, {proc.max_memory} KB]'
-                print_ansi(f'{["#ansi[Failed](red|bold) ", "#ansi[Success](green|bold)"][res]} {usage:<19}', end=' ')
+                print_ansi(f'{["#ansi[Failed](red|bold) ", "#ansi[Success](green|bold)"][res]} {usage:<19} {stdout}', end=' ')
                 print_ansi(
                     ', '.join(
                         [
