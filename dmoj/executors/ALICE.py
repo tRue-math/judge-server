@@ -29,7 +29,6 @@ class Executor(ScriptExecutor):
             while components and components[-1]:
                 fs.append(ExactDir('/'.join(components)))
                 components.pop()
-        print(fs)
         return fs
 
     def get_cmdline(self, **kwargs) -> List[str]:
