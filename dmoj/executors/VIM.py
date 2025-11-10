@@ -9,6 +9,7 @@ class Executor(ScriptExecutor):
     command = 'vim-executor'
     test_program = 'ZZ'
     fsize=1000000 # input.txt用に書き込めるバイト数を設定
+    nproc=-1 # プロセス数制限をなくす
 
     def create_files(self, problem_id, source_code, *args, **kwargs) -> None:
       super().create_files(problem_id, source_code)
@@ -20,4 +21,4 @@ class Executor(ScriptExecutor):
         assert command is not None
         return [command, self._code,self.input_file]
 
-    syscalls=['vfork','execve','fchdir','chdir','wait4','pselect6']
+    syscalls=['vfork','execve','fchdir','chdir','wait4','pselect6','getxattr','ftruncate','fsync','fchmod','setxattr']
