@@ -4,7 +4,7 @@ from typing import List
 
 class Executor(ScriptExecutor):
     ext = 'ws'
-    command = 'whitepycli'
+    command = 'wsi'
     test_program = """\
 S S S T	T	S S T	S T	L:Push_+1100101=101='e'_onto_the_stack
 T	L
